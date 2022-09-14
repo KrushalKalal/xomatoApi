@@ -26,6 +26,9 @@ app.use((req, res, next) => {
     next();
 })
 
+const AuthController = require('./controller/authController');
+app.use('/api/auth',AuthController);
+
 const CityController = require('./controller/cityController');
 app.use('/api',CityController)
 
@@ -37,6 +40,9 @@ app.use('/api',OptionController)
 
 const MenuController = require('./controller/menuController');
 app.use('/api',MenuController)
+
+const OrderController = require('./controller/orderController');
+app.use('/api',OrderController)
 
 
 

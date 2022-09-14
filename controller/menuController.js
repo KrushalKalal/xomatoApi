@@ -17,6 +17,16 @@ router.get('/menu/:id',(req,res) => {
     })
 })
 
+router.post('/menuItem',(req,res) => {
+    if(Array.isArray(req.body.id)){
+     Menu.find({menu_id:{$in:req.body.id}},(err,data) => {
+           if(err) throw err;
+           res.send(data)
+       })
+   }else{
+       res.send("Invalid input");  
+    }
+})
 
 
 module.exports = router;
