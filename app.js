@@ -12,7 +12,7 @@ let cors = require('cors');
 let bodyParser = require('body-parser');
 const superagent = require('superagent');
 const request = require('request');
-let mongoUrl = process.env.MongoLiveURL;
+let mongoUrl = "mongodb+srv://shoppinghub:shoppinghub123@cluster0.w4byv.mongodb.net/zomato?retryWrites=true&w=majority";
 
 app.use(morgan('common'));
 app.use(bodyParser.urlencoded({extended:true}));

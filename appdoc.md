@@ -14,4 +14,4 @@ http://localhost:9870/details/1
 
 
 
- http://localhost:7800/api/menuItem
+ http://localhost:7800/api/menuItem 
