@@ -9,9 +9,7 @@ dotenv.config();
 let port = process.env.PORT || 9870;
 const hostname = 'localhost';
 let cors = require('cors');
-let bodyParser = require('body-parser');
-const superagent = require('superagent');
-const request = require('request');
+let bodyParser = require('body-parser');;
 let mongoUrl = "mongodb+srv://shoppinghub:shoppinghub123@cluster0.w4byv.mongodb.net/zomato?retryWrites=true&w=majority";
 
 app.use(morgan('common'));
@@ -19,11 +17,16 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
+// app.use((req, res, next) => {
+//     res.setHeader('Access-Control-Allow-Origin', '*');
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
+//     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//     next();
+// })
+
+app.get('/',(req,res)=>{
+    res.send("Response from xomato");
+
 })
 
 const AuthController = require('./controller/authController');
