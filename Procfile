@@ -1,1 +1,1 @@
-web:node app.js --port=7800
+web:node app.js
