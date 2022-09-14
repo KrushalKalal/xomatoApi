@@ -1,1 +1,1 @@
-web:node app.js --port=9870
+worker:node app.js
