@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 let morgan = require('morgan');
 let dotenv = require('dotenv');
 dotenv.config();
-let port = process.env.PORT || 3000;
+let port = server.listen(process.env.PORT || 3000);
 const hostname = 'localhost';
 let cors = require('cors');
 let bodyParser = require('body-parser');;
@@ -41,7 +41,7 @@ app.use('/api',RestaurantController)
 const OptionController = require('./controller/optionController');
 app.use('/api',OptionController)
 
-const MenuController = require('./controller/menuController');
+const MenuController = require('./controller/menuController');s
 app.use('/api',MenuController)
 
 const OrderController = require('./controller/orderController');
