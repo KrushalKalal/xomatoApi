@@ -41,7 +41,7 @@ app.use('/api',RestaurantController)
 const OptionController = require('./controller/optionController');
 app.use('/api',OptionController)
 
-const MenuController = require('./controller/menuController');s
+const MenuController = require('./controller/menuController');
 app.use('/api',MenuController)
 
 const OrderController = require('./controller/orderController');
