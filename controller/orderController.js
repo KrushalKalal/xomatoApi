@@ -26,6 +26,7 @@ router.post('/placeOrder',(req,res) => {
     Order.create({
         order_id: req.body.order_id,
         name: req.body.name,
+        restaurant_name:req.body.restaurant_name,
         email: req.body.email,
         address:req.body.address,
         phone:req.body.phone,
