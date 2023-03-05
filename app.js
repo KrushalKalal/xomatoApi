@@ -1,12 +1,13 @@
+require('dotenv').config({path:'./.env'});
 let express = require('express');
 let app = express();
 
 const mongoose = require('mongoose');
 
 let morgan = require('morgan');
-let dotenv = require('dotenv');
-dotenv.config();
-let port = app.listen(process.env.PORT || 3000);
+
+let port = 9870
+
 const hostname = 'localhost';
 let cors = require('cors');
 let bodyParser = require('body-parser');;
@@ -53,6 +54,7 @@ mongoose.connect(mongoUrl,
     { useNewUrlParser: true, useUnifiedTopology: true }
 ).then(client => {
     app.listen(port, hostname, () => {
+        
         console.log(`Server running at http://${hostname}:${port}/`)
     });
 }).catch(err => {
